@@ -8,7 +8,7 @@ Welcome to my coding repository! Here I document my journey mastering Data Struc
 
 <!-- STATS:START -->
 ![Solved](https://img.shields.io/badge/Solved-7-blue?style=for-the-badge&logo=leetcode)
-![Focus](https://img.shields.io/badge/Main_Focus-arrays-hashing_(7)-orange?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Main_Focus-arrays_hashing_(7)-orange?style=for-the-badge)
 <!-- STATS:END -->
 
 ## 📂 Structure
