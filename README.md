@@ -7,7 +7,7 @@ Welcome to my coding repository! Here I document my journey mastering Data Struc
 - **Focus:** NeetCode 250 / Blind 75
 
 <!-- STATS:START -->
-![Solved](https://img.shields.io/badge/Solved-25-blue?style=for-the-badge&logo=leetcode)
+![Solved](https://img.shields.io/badge/Solved-26-blue?style=for-the-badge&logo=leetcode)
 ![Focus](https://img.shields.io/badge/Main_Focus-arrays_hashing_(17)-orange?style=for-the-badge)
 <!-- STATS:END -->
 
