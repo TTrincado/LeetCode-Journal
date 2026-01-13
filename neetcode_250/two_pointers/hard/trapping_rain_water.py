@@ -33,3 +33,48 @@ class Solution:
             water_trapped += calc
 
         return water_trapped
+    
+class Solution:
+    """
+    Approach: Two Pointers.
+    
+    Core Logic:
+    Instead of pre-computing 'max_left' and 'max_right' arrays (which takes O(N) space),
+    we use two pointers that move inward.
+    
+    The Key Insight:
+    The amount of water at any index is determined by the shorter of the two walls:
+    Water = min(max_L, max_R) - height[i].
+    
+    By maintaining 'max_left' and 'max_right' variables and always moving the pointer 
+    on the shorter side, we guarantee that the current side is the limiting factor.
+    We don't need to know the exact height of the other side, only that it is taller.
+
+    And so, we go forward moving the pointers as we calculate the water trapped in the ith position,
+    where we move the smallest pointer (if they are equal, it doesnt matter which one we move, I chose left)
+    and check if we have a new max_direction.
+
+    Time Complexity: O(N) - We process each element exactly once.
+    Space Complexity: O(1) - Only constant extra variables used.
+    """
+    def trap(self, height: list[int]) -> int:
+        l, r = 0, len(height) - 1
+        max_left = height[l]
+        max_right = height[r]
+        res = 0
+
+        while l < r:
+            if max_left <= max_right: 
+                l += 1
+                max_left = max(max_left, height[l])
+    
+                # Because we updated max_left first, (max_left - height[l]) is guaranteed >= 0.
+                res += max_left - height[l]
+
+            else:
+                r -= 1
+                max_right = max(max_right, height[r])
+                
+                res += max_right - height[r]
+
+        return res
