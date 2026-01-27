@@ -34,3 +34,16 @@ class Solution:
             return nums[0]
         else:
             return nums[pos[1] + 1]
+        
+    def findMin(arr):
+        """
+        Same but more elegant solution.
+        """
+        l, r = 0, len(arr) - 1
+        while l < r:
+            mid = l + (r - l) // 2
+            if arr[mid] > arr[r]:
+                l = mid + 1
+            else:
+                r = mid
+        return l
